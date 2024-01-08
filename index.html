@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #quote {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        #newQuoteBtn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quote">Hello Miss PHD. Click the button to get a random quote. That will motivate you for sure</div>
+<button id="newQuoteBtn" onclick="getRandomQuote()">New Quote</button>
+
+<script>
+    // Array of quotes
+    const quotes = [
+        "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+        "The way to get started is to quit talking and begin doing. - Walt Disney",
+        "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+        "It always seems impossible until it's done. - Nelson Mandela",
+        "Believe you can and you're halfway there. -Theodore Roosevelt"
+        // Add more quotes as needed
+    ];
+
+    // Function to get a random quote
+    function getRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomIndex];
+        document.getElementById('quote').innerHTML = randomQuote;
+    }
+</script>
+
+</body>
+</html>
